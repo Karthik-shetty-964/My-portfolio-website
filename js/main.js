@@ -24,7 +24,7 @@
 })();
 
 function bodyScrollingToggle(){
-    document.body.classList.toggle("stop-scrolling");
+    document.body.classList.toggle("hidden-scrolling");
 }
 /*------------portfolio filter and popup---------------*/
 
@@ -87,12 +87,16 @@ function bodyScrollingToggle(){
             slideIndex=0;
             popupToggle();
             popupSlideShow();
-            // popupDetailsToggle();
+            popupDetails();
         }
     }) 
 
     closeBtn.addEventListener('click',()=>{
         popupToggle();
+        if(projectDetailsContainer.classList.contains("active")){
+            popupDetailsToggle();
+        }
+
     })
 
     function popupToggle(){
@@ -133,6 +137,25 @@ function bodyScrollingToggle(){
          }
          popupSlideShow();
      })
+
+     function popupDetails(){
+         //if portfolio-item-details not exists
+         if(!portfolioItems[itemIndex].querySelector(".portfolio-item-details")){
+             projectDetailsBtn.style.display="none";
+             return;
+         }
+         projectDetailsBtn.style.display="block";
+        //get the project details
+        const details=portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+        popup.querySelector(".pp-project-details").innerHTML=details;
+
+        const title=portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML; 
+        popup.querySelector(".pp-title h2").innerHTML=title;
+
+        const category=portfolioItems[itemIndex].getAttribute("data-category");
+        popup.querySelector(".pp-project-category").innerHTML=category.split("-").join(" ");
+
+     }
      
      projectDetailsBtn.addEventListener("click",()=>{
          popupDetailsToggle();
@@ -155,4 +178,51 @@ function bodyScrollingToggle(){
         }
      }
 
+})();
+
+
+/*----------------testimonial section--------------- */
+(()=>{
+    
+    const sliderContainer=document.querySelector(".testi-slider-container");
+    slides=sliderContainer.querySelectorAll(".testi-item");
+    slideWidth=sliderContainer.offsetWidth;
+    testi_prevBtn=document.querySelector(".testi-slider-nav .prev");
+    testi_nextBtn=document.querySelector(".testi-slider-nav .next");
+    activeSlide=sliderContainer.querySelector(".testi-item.active");
+    let slideIndex=Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
+
+    //set width of all slides
+    slides.forEach((slide)=>{
+        slide.style.width=slideWidth+"px";
+    })
+    //set width of slidercontainer
+    sliderContainer.style.width=slideWidth * slides.length+"px";
+
+    testi_nextBtn.addEventListener("click",()=>{
+        if(slideIndex === slides.length-1){
+            slideIndex=0;
+        }else{
+            slideIndex++;
+        }
+        slider();  
+    })
+
+    testi_prevBtn.addEventListener("click",()=>{
+        if(slideIndex === 0){
+            slideIndex= slides.length-1;
+        }else{
+            slideIndex--;
+        }
+        slider();
+    })
+    
+    function slider(){
+        //deactivate existing active slide
+        sliderContainer.querySelector(".testi-item.active").classList.remove("active");
+        //activate new slide
+        slides[slideIndex].classList.add("active");
+        sliderContainer.style.marginLeft= - (slideWidth * slideIndex)+"px";  
+    }
+    slider();
 })();
