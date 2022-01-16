@@ -248,6 +248,34 @@ img{
 .section.hide{
     display: none;
 }
+/*-------------------
+preloader
+---------------------*/
+.preloader{
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index:1500;
+    background-color:var(--bg-black-50);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.preloader .box{
+    width:65px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.preloader .box div{
+    height:15px;
+    width:15px;
+    background-color:var(--skin-color);
+    border-radius:50%;
+    
+}
 /*----------------------
 Header
 ------------------------*/
