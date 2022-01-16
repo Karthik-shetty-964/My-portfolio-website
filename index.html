@@ -10,11 +10,32 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <!--Main css file-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--responsive css file-->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <!--color skin-->
     <link rel="stylesheet" type="text/css" href="css/skins/color1.css">
+    <!--style switcher-->
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color1" href="css/skins/color1.css">
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color2" href="css/skins/color2.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color3" href="css/skins/color3.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color4" href="css/skins/color4.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color5" href="css/skins/color5.css" disabled>
+    
+    <link rel="stylesheet" type="text/css" href="css/style-switcher.css">
 </head>
 
-<body>
+<body >
+
+<!--preloader start-->
+<div class="preloader">
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!--preloader end-->
+
 
     <!--Header start-->
     <header class="header">
@@ -36,21 +57,22 @@
         <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
         <div class="nav-menu-inner">
             <ul>
-                <li><a href="#" class="inner-shadow active">home</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+                <li><a href="#home" class="link-item inner-shadow active">home</a></li>
+                <li><a href="#about" class="link-item outer-shadow hover-in-shadow">about</a></li>
+                <li><a href="#services" class="link-item outer-shadow hover-in-shadow">services</a></li>
+                <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">portfolio</a></li>
+                <li><a href="#testimonial" class="link-item outer-shadow hover-in-shadow">testimonial</a></li>
+                <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">contact</a></li>
             </ul>
         </div>
         <!--copyright text-->
         <p class="copyright-text">&copy; 2022 Karthik shetty portfolio</p>
     </nav>
+    <div class="fade-out-effect"></div>
     <!--Navigation menu end-->
 
-    <!--home section start-->
-    <section class="home-section section">
+<!--home section start-->
+    <section class="home-section section active" id="home">
         <!--effect wrap start-->
         <div class="effect-wrap">
             <div class="effect effect-1">
@@ -110,7 +132,7 @@
                     <p>Hello</p>
                     <h2>I'm Karthik shetty</h2>
                     <h1>Web Designer & Developer</h1>
-                    <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+                    <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
                 </div>
                 <div class="home-img">
                     <div class="img-box inner-shadow">
@@ -123,7 +145,7 @@
     <!--home section end-->
 
     <!--About section start -->
-    <section class="about-section section">
+    <section class="about-section section" id="about">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -153,7 +175,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore possimus tenetur cum debitis
                         minus rem accusamus soluta nihil nemo dolore.</p>
                     <a href="cv.docx" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
-                    <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire me</a>
+                    <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire me</a>
                 </div>
             </div>
             <!--about tabs start-->
@@ -362,7 +384,7 @@
 
 
     <!--Services section start-->
-    <section class="service-section section">
+    <section class="service-section section" id="services">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -443,7 +465,7 @@
     <!--Services section end-->
 
     <!--portfolio section start-->
-    <section class="portfolio-section section">
+    <section class="portfolio-section section" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="section-title ">
@@ -774,7 +796,7 @@
     <!--portfolio section end-->
 
 <!--testimonial section start -->
-    <section class="testimonial-section section">
+    <section class="testimonial-section section" id="testimonial">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -835,7 +857,7 @@
 
 
 <!--Contact section start-->
-<section class="contact-section section">
+<section class="contact-section section" id="contact">
     <div class="container">
         <div class="row">
             <div class="section-title">
@@ -910,27 +932,11 @@
         <div class="pp-details">
             <div class="pp-details-inner">
                 <div class="pp-title">
-                    <h2>personal portfolio</h2>
-                    <p>Category - <span class="pp-project-category">Web Application</span></p>
+                    <h2></h2>
+                    <p>Category - <span class="pp-project-category"></span></p>
                 </div>
                 <div class="pp-project-details">
-                    <div class="row">
-                        <div class="description">
-                            <h3>Project Brief:</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad dicta ipsum
-                                excepturi? Quos aliquid cupiditate, quibusdam, non, eaque deserunt unde sapiente
-                                ipsum repellat eveniet dolores? Quis neque ab rem Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Quia, ipsa?</p>
-                        </div>
-                        <div class="info">
-                            <h3>Project info</h3>
-                            <ul>
-                                <li>Date - <span>2022</span></li>
-                                <li>Tools - <span>Html,Css,Bootstrap,Java</span></li>
-                                <li>Database - <span>MySql</span></li>
-                            </ul>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </div>
@@ -942,7 +948,7 @@
                         class="fas fa-plus"></i></div>
                 <div class="pp-close outer-shadow hover-in-shadow">&times;</div>
                 <img src="img/project_images/chc/1.jpg" alt="img" class="pp-img outer-shadow">
-                <div class="pp-counter">1 of 12</div>
+                <div class="pp-counter"></div>
             </div>
             <!--Loader -->
             <div class="pp-loader">
@@ -956,8 +962,32 @@
     </div>
     <!--portfolio popup end-->
 
+<!--style switcher start-->
+<div class="style-switcher outer-shadow">
+    <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+        <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon outer-shadow hover-in-shadow">
+        <i class="fas"></i>
+    </div>
+
+    <h4>Theme colors</h4>
+    <div class="colors">
+      <span class="color1" onclick="setActiveStyle('color1')"></span>  
+      <span class="color2" onclick="setActiveStyle('color2')"></span>  
+      <span class="color3" onclick="setActiveStyle('color3')"></span>  
+      <span class="color4" onclick="setActiveStyle('color4')"></span>  
+      <span class="color5" onclick="setActiveStyle('color5')"></span>  
+
+    </div>
+</div>
+<!--style switcher end-->
+
+
     <!--main js-->
     <script src="js/main.js"></script>
+    <!--style-switcher js-->
+    <script src="js/style-switcher.js"></script>
 </body>
 
 </html>
