@@ -37,7 +37,7 @@ if(localStorage.getItem("color")!==null){
    changeColor();
 }
 
-/*-----------Dark and light mode----------*/
+/*---------Dark and light mode--------*/
 const dayNight=document.querySelector(".day-night");
 
 dayNight.addEventListener("click",()=>{
