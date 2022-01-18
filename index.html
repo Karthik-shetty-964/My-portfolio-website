@@ -935,7 +935,8 @@
             </div>
             <div class="row">
                 <div class="contact-form">
-                    <form action="mail.php" method="post">
+                   <!-- <form action="mail.php" method="post">-->
+                    <form name="contact" method="POST" data-netlify="true">
                         <div class="row">
                             <div class="w-50">
                                 <div class="input-group outer-shadow hover-in-shadow">
@@ -953,6 +954,9 @@
                                     <textarea class="input-control" name="message" placeholder="Message"></textarea>
                                 </div>
                             </div>
+                            
+                            <input type="hidden" name="form-name" value="contact">
+                            
                         </div>
                         <div class="row">
                             <div class="submit-btn">
