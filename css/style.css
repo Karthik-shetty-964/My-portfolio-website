@@ -177,7 +177,7 @@ img{
 .effect-5{
     height:50px;
     width: 50px;
-    right: 13%;
+    right: 10%;
     top: 27%;
     display: flex;
     justify-content: space-between;
@@ -505,12 +505,12 @@ home section
     max-width: 450px;
     display:block;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 10%;
     padding: 15px;
 }
 .home-section .home-img .img-box img{
     width: 100%;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 10px solid transparent;
 }
 
